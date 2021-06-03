@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: rgb(32, 59, 59);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        #box {
+            background-color: rgb(7, 92, 92);
+            border: 3px solid rgb(26, 25, 25);
+            border-radius: 10px;
+            padding: 20px;
+            min-width: 350px;
+            max-width: 500px;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+        }
+        
+        #pais {
+            width: 180px;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 24px;
+            border: 2px solid rgb(252, 193, 2);
+            background: none;
+            outline: none;
+            transition: 0.50s;
+        }
+        
+        #pais:focus {
+            width: 230px;
+            border-color: rgb(48, 219, 5);
+        }
+        
+        #bttn {
+            width: max-content;
+            padding: 10px 25px;
+            border: 2px solid rgb(252, 73, 2);
+            border-radius: 24px;
+            background: rgb(26, 25, 25);
+            cursor: pointer;
+            color: white;
+            transition: 0.70s;
+        }
+        
+        #bttn:hover {
+            background: rgb(0, 0, 0);
+        }
+        
+        #res {
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box">
+        <h1>Sistema de Nacionalidade</h1>
+        <label for="pais">De qual país você é?</label>
+        <input type="text" name="pais" id="pais" placeholder="Insira o nome do país">
+        <input type="button" value="Verificar" id="bttn" onclick="verificar()">
+        <div id="res"></div>
+    </div>
+    <script>
+        function verificar() {
+            var res = document.getElementById('res')
+            var campoPais = document.getElementById('pais')
+            var pais = (campoPais.value)
+
+            res.innerHTML = `<p>Vivendo em <strong>${pais}</strong>.</p>`
+            if (pais.toUpperCase() == 'BRASIL') {
+                res.innerHTML += `<p>Você é brasileiro/a.</p>`
+
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro/a.</p>`
+            }
+
+        }
+    </script>
+</body>
+
+</html>
+
+</html>
