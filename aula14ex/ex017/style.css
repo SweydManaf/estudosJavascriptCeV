@@ -6,6 +6,7 @@ body {
 
 header {
     color: white;
+    text-align: center;
 }
 
 section {
@@ -15,6 +16,10 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 3px 3px 15px rgb(0, 0, 0, 0363);
+}
+
+select {
+    margin-top: 15px;
 }
 
 footer {
